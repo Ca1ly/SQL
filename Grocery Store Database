@@ -1,0 +1,23 @@
+CREATE TABLE store (product_id INTEGER PRIMARY KEY, Name TEXT, Price INTEGER, Aisle INTEGER, Quantity INTEGER);
+
+INSERT INTO store VALUES(1, "mango", .78, 3, 12);
+INSERT INTO store VALUES(2, "lettuce", .59, 2, 5);
+INSERT INTO store VALUES(3, "apple", .30, 3, 1);
+INSERT INTO store VALUES(4, "banana", .25, 3, 5);
+INSERT INTO store VALUES(5, "frozen strawberries", 2.15, 7, 2);
+INSERT INTO store VALUES(6, "milk", 4.50, 9, 1);
+INSERT INTO store VALUES(7, "egg", 2.55, 9, 2);
+INSERT INTO store VALUES(8, "flour", 1.78, 15, 8);
+INSERT INTO store VALUES(9, "cereal", 2.80, 9, 2);
+INSERT INTO store VALUES(10, "candy", .78, 22, 9);
+INSERT INTO store VALUES(11, "beef", 4.77, 6, 2);
+INSERT INTO store VALUES(12, "bacon", 5.78, 5, 3);
+INSERT INTO store VALUES(13, "yogurt", 2.78, 9, 3);
+INSERT INTO store VALUES(14, "mustard", 1.95, 10, 1);
+INSERT INTO store VALUES(15, "custom pastry", 50.99, 19, 1);
+INSERT INTO store VALUES(16, "bread", .78, 18, 4);
+INSERT INTO store VALUES(17, "crackers", 2.00, 10, 5);
+INSERT INTO store VALUES(18, "potato chip", 3.78, 11, 2);
+
+SELECT * FROM store Order by Price;
+Select SUM(Price) From store;
