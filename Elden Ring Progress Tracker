@@ -1,0 +1,105 @@
+CREATE TABLE EldenRing (
+    id INTEGER PRIMARY KEY,
+    Boss TEXT,
+    defeated TEXT,
+     Level INTEGER
+    );
+    
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "grafted scion", NULL, 1);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "soldier of goddrick", "Yes", 10);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "tree sentinel", "YES", 18);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "Demi-human cheif", "yes", 20);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "flying dragon agheel", "YES", 22);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "night's cavalry", "Yes", 22);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "mad pumpkin head", "YES", 25);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "margit, the fell omen", "YES", 34);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "minor erdtree(wp) ", "yes", 40);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "cemetery shade", "YES", 40);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "erdtree burial watchdog", "YES", 44);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "leonine misbegotten", "YES", 46);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "goddrick the grafted", "YES", 48);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "tibia mariner", "YES", 48);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "crystalians(duo)", "YES", 51);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "glimstone dragon smarag", "YES", 52);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "red wolf of radagon", "YES", 55);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "rennala, queen of the full moon", "YES", 58);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "royal knight loretta", "YES", 60);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "commander o'neil", "YES", 64);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "cleanrot knight ", "YES", 67);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "fallingstar beast", "YES", 71);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "flying dragon greyll", "YES", 71);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "night's cavalry(c)", "YES", 72);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "lion misbegotten warrior/crucible knight", "YES", 77);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "ulcerated tree spirit", "YES", 77);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "starscouge radahn", "YES", 84);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "godskin apostle", "YES", 85);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "magma wyrm", "YES", 88);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "glimstene dragon asula", "YES", 93);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "stonedigger troll", NULL, null);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "wormface", "YES", 90);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( " tree sentinel duo", "YES", 94);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "draconic tree sentinel", "YES", 99);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "Godfrey, First Elden Lord (Golden Shade)", "YES", 99);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "Morgott, The Omen King", "YES", 105);
+ INSERT into EldenRing (Boss, defeated, Level) VALUES( "mohg the omen", null, 110);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "God-Devouring Serpent / Rykard, Lord of Blasphemy", "YES", 113);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "fire giant", "YES", 114);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "godskin duo", "YES", 120);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "stray mimmic tear", "YES", 120);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "astel, stars of destruction", "YES", 77);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "great wyrm theodorix", "YES", 112);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "regal ancestor spirit", "YES", 112);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "valiant gargoyle (duo)", "YES", 119);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "fia champions", "YES", 124);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "lichdragon fortissax", "YES", 127);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "loretta, knight of the haligtree", "YES", 129);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "malenia, blade of miquella", "YES", 145);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "Dragonlord Placidusax", "YES", 150);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "Beast Clergyman / Maliketh, the Black Blade", "YES", 155);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "Sir Gideon Ofnir, the All-Knowing", "YES", 158);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "Godfrey, First Elden Lord (Hoarah Loux)", "YES", 160);
+INSERT into EldenRing (Boss, defeated, Level) VALUES( "Radagon of the Golden Order / Elden Beast", "YES", 164);
+
+SELECT * FROM EldenRing;
+
+ALTER TABLE EldenRing ADD death Integer default "unknown";
+
+UPDATE EldenRing SET death = 1 WHERE id = 1;
+
+UPDATE EldenRing SET death = 0 WHERE id = 2;
+
+UPDATE EldenRing SET death = 10 WHERE id = 3;
+
+UPDATE EldenRing SET death = 1 WHERE id = 4;
+
+
+UPDATE EldenRing SET death = 0 WHERE id IN (6,7,9,14,17,18,20,24,31,35,41,42,52);
+
+UPDATE EldenRing SET death = 1 WHERE id IN (5,15,23,29,43,44,32);
+
+UPDATE EldenRing SET death = 2 WHERE id IN (10,11,16,19,28,45,12,40,46);
+UPDATE EldenRing SET death = 5 WHERE id IN (8,21,22,25,30,33,36,37,38,39,45,48,53);
+
+UPDATE EldenRing SET death = 20 WHERE id = 13;
+
+UPDATE EldenRing SET death = 11 WHERE id = 26;
+
+UPDATE EldenRing SET death = 37 WHERE id = 27;
+
+UPDATE EldenRing SET death = 14 WHERE id = 34;
+
+UPDATE EldenRing SET death = 6 WHERE id = 47;
+
+UPDATE EldenRing SET death = 34 WHERE id = 49;
+
+UPDATE EldenRing SET death = 17 WHERE id = 50;
+
+UPDATE EldenRing SET death = 10 WHERE id = 51;
+
+UPDATE EldenRing SET death = 25 WHERE id = 54;
+
+SELECT * FROM EldenRing;
+
+DELETE FROM EldenRing WHERE id = 1;
+
+SELECT * FROM EldenRing;
