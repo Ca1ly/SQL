@@ -1,0 +1,79 @@
+CREATE TABLE tank (id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        rDPS INTEGER);
+        
+Insert INTO tank (name, rDPS) VALUES ("paladin", 65.80);
+Insert INTO tank (name, rDPS) VALUES ("gunbreaker", 67.70);
+Insert INTO tank (name, rDPS) VALUES ("warrior", 65.86);
+Insert INTO tank (name, rDPS) VALUES ("dark knight", 68.23);
+
+CREATE TABLE DPS (id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        rDPS INTEGER);
+        
+Insert INTO DPS (name, rDPS) VALUES ("dancer", 91.02);
+Insert INTO DPS (name, rDPS) VALUES ("Bard", 92.56);
+Insert INTO DPS (name, rDPS) VALUES ("red mage", 94.70);
+Insert INTO DPS (name, rDPS) VALUES ("reaper", 99.98);
+Insert INTO DPS (name, rDPS) VALUES ("machinist", 96.75);
+Insert INTO DPS (name, rDPS) VALUES ("summoner", 96.11);
+Insert INTO DPS (name, rDPS) VALUES ("ninja", 102.24);
+Insert INTO DPS (name, rDPS) VALUES ("dragoon", 102.89);
+Insert INTO DPS (name, rDPS) VALUES ("black mage", 104.74);
+Insert INTO DPS (name, rDPS) VALUES ("monk", 103.21);
+Insert INTO DPS (name, rDPS) VALUES ("samerai", 103.67);
+
+CREATE TABLE healer (id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        rDPS INTEGER);
+        
+Insert INTO healer (name, rDPS) VALUES ("astrologian", 54.09);
+Insert INTO healer (name, rDPS) VALUES ("scholar", 58.16);
+Insert INTO healer (name, rDPS) VALUES ("sage", 60.11);
+Insert INTO healer (name, rDPS) VALUES ("white mage", 60.23);
+
+CREATE TABLE Top_teams (id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT,
+        rank INTEGER);
+Insert INTO TOP_teams (name, rank) VALUES ( "static impact", 1);
+Insert INTO TOP_teams (name, rank) VALUES ( "iconic", 2);
+Insert INTO TOP_teams (name, rank) VALUES ( "Snowfall", 3);
+
+CREATE TABLE members (id INTEGER PRIMARY KEY AUTOINCREMENT,
+        job TEXT,
+        team_id INTEGER,
+        team_members TEXT);
+Insert INTO members ( job,team_id, team_members) VALUES ("tank",1, "Tyrian");
+Insert INTO members ( job,team_id, team_members) VALUES ("tank",1, "Naruma");
+Insert INTO members ( job,team_id, team_members) VALUES ("healer",1, "Remi");
+Insert INTO members ( job,team_id, team_members) VALUES ("healer",1, "Lilia");
+Insert INTO members ( job,team_id, team_members) VALUES ("DPS",1, "Corrin");
+Insert INTO members ( job,team_id, team_members) VALUES ("DPS",1, "Morgana");
+Insert INTO members ( job,team_id, team_members) VALUES ("DPS",1, "C'ristina");
+Insert INTO members ( job,team_id, team_members) VALUES ("tank",2, "Saizon");
+Insert INTO members ( job,team_id, team_members) VALUES ("tank",2, "Faine");
+Insert INTO members ( job,team_id, team_members) VALUES ("healer",2, "Taes");
+Insert INTO members ( job,team_id, team_members) VALUES ("healer",2, "Shayli");
+Insert INTO members ( job,team_id, team_members) VALUES ("DPS",2, "Khalida");
+Insert INTO members ( job,team_id, team_members) VALUES ("DPS",2, "Akar");
+Insert INTO members ( job,team_id, team_members) VALUES ("DPS",2, "Cireese");
+Insert INTO members ( job,team_id, team_members) VALUES ("tank",3, "Ventus");
+Insert INTO members ( job,team_id, team_members) VALUES ("tank",3, "Cat");
+Insert INTO members ( job,team_id, team_members) VALUES ("healer",3, "Huksplutty");
+Insert INTO members ( job,team_id, team_members) VALUES ("healer",3, "Koharu");
+Insert INTO members ( job,team_id, team_members) VALUES ("DPS",3, "Kuma");
+Insert INTO members ( job,team_id, team_members) VALUES ("DPS",3, "Lion");
+Insert INTO members ( job,team_id, team_members) VALUES ("DPS",3, "Theo");
+
+SELECT * FROM tank
+order by rDPS;
+SELECT * FROM DPS
+order by rDPS;
+SELECT * FROM healer
+order by rDPS;
+SELECT * FROM Top_teams;
+
+SELECT Top_teams.name as Teams, members.job, members.team_members as Team_members FROM Top_teams
+    JOIN members
+    on Top_teams.id=members.team_id;
+    
